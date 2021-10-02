@@ -9,5 +9,5 @@ RUN dotnet publish -c Release -o out
 
 FROM mcr.microsoft.com/dotnet/aspnet:5.0
 WORKDIR /app
-COPY --from=build /app/out
+COPY --from=build /app/out .
 ENTRYPOINT ["dotnet", "ConversaoPeso.Web.dll"]
