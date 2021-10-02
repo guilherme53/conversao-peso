@@ -1,3 +1,5 @@
+
+#Comentario
 name: CI-CD
 
 on:
@@ -21,8 +23,8 @@ jobs:
       - name: Docker Build and Push
         uses: docker/build-push-action@v2.7.0
         with:
-          context: ./src
-          file: ./src/Dockerfile
+          context: ./ConversaoPeso.Web
+          file: ./Dockerfile
           push: true
           tags: |
             guilherme53/conversao-temperatura:latest
@@ -44,4 +46,4 @@ jobs:
         with:
           images: guilherme53/conversao-temperatura:v${{ github.run_number }}
           manifests: |
-            ./deployment.yaml
+            ./meudeployment2.yaml
