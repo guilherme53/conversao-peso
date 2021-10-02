@@ -46,4 +46,4 @@ jobs:
         with:
           images: guilherme53/conversao-temperatura:v${{ github.run_number }}
           manifests: |
-            ./meudeployment2.yaml
+            ./deployment_peso.yaml
