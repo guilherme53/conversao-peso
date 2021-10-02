@@ -13,7 +13,7 @@ spec:
         app: web
     spec:
       containers:
-        - name: web2
+        - name: webpeso
           image: guilherme53/conversao-peso:v10
           ports:
             - containerPort: 80
@@ -21,7 +21,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: web2
+  name: webpeso
 spec:
   selector:
     app: web
